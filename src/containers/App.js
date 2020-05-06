@@ -31,7 +31,7 @@ class App extends Component {
         const filteredRobots  = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
-        // if robots.length === 0, then show loading -> so, 0 means false, we want true, so ! to reverse
+        // if robots.length === 0, then show loading message -> so, 0 means false, but in this case it's true, so ! to reverse and show message
         return !robots.length ?
             <h1 className='tc'>Loading...</h1> :
         (
